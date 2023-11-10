@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    var fruits: [Fruit] = fruitsData
     var body: some View {
         TabView{
-            ForEach(0..<5){ item in
-                FruitCardView()
+            ForEach(fruits[0...5]){ item in
+                FruitCardView(fruit: item)
+                
             }
         }
         .tabViewStyle(PageTabViewStyle()) // this style used to scroll to different tab
