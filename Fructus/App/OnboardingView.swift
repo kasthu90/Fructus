@@ -13,8 +13,7 @@ struct OnboardingView: View {
         TabView{
             ForEach(fruits[0...5]){ item in
                 FruitCardView(fruit: item)
-                
-            }
+           }
         }
         .tabViewStyle(PageTabViewStyle()) // this style used to scroll to different tab
         .padding(.vertical,20)

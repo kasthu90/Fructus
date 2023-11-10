@@ -33,7 +33,6 @@ struct FruitCardView: View {
                     .frame(maxWidth: 480)
                 
                 StartButtonView()
-                
             }
         }
         .onAppear{

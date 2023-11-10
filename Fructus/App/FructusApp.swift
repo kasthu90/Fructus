@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct FructusApp: App {
+    // isOnboarding" is a key, used to store the bool value
+    @AppStorage("isOnboarding") var isonBoarding = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isonBoarding{
+                OnboardingView()
+            }else{
+                ContentView()
+            }
+            
         }
     }
 }
