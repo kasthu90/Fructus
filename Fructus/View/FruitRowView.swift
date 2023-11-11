@@ -20,7 +20,7 @@ struct FruitRowView: View {
                     LinearGradient(gradient: Gradient(colors: (fruits.gradientColors)), startPoint: .top, endPoint: .bottom)
                 )
                 .cornerRadius(8)
-    
+            
             VStack(alignment: .leading, spacing: 5) {
                 Text(fruits.title)
                     .font(.title2)
