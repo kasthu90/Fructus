@@ -46,6 +46,7 @@ struct FruitDetailView: View {
             }
             .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         }
+        .navigationViewStyle(StackNavigationViewStyle()) // to fix the content size in ipad added this line
     }
 }
 

@@ -18,8 +18,8 @@ struct FructusApp: App {
         WindowGroup {
             
             if isOnboarding {
-               OnboardingView()
-            } 
+                OnboardingView()
+            }
             else{
                 ContentView()
                 
@@ -27,3 +27,4 @@ struct FructusApp: App {
         }
     }
 }
+

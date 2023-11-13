@@ -36,6 +36,7 @@ struct ContentView: View {
                     }
             )
         }
+        .navigationViewStyle(StackNavigationViewStyle()) //to fix the content size in ipad added this line
     }
 }
 
