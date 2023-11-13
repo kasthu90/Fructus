@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @Environment(\.presentationMode) var presentation
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView{
@@ -19,6 +19,8 @@ struct SettingsView: View {
                             SettingsLabelView(labelText: "Fructus", labelImage: "info.circle")
                     ){
                         Divider().padding(.vertical,4)
+                        
+                        
                         HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 20) {
                             Image("logo")
                                 .resizable()
@@ -31,8 +33,30 @@ struct SettingsView: View {
                         
                     }
                     
+                    GroupBox(
+                        label:
+                            SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
+                    ) {
+                        SettingsRowView(name: "Developer", content: "John / Jane")
+                        SettingsRowView(name: "Designer", content: "Robert Petras")
+                        SettingsRowView(name: "Compatibility", content: "iOS 16")
+                        SettingsRowView(name: "Website", linkLabel: "Credo Academy", linkDestination: "credo.academy")
+                        SettingsRowView(name: "Twitter", linkLabel: "@RobertPetras", linkDestination: "twitter.com/robertpetras")
+                        SettingsRowView(name: "SwiftUI", content: "4")
+                        SettingsRowView(name: "Version", content: "1.5.0")
+                    }
+                    
                 }
                 .navigationBarTitle(Text("Settings"), displayMode: .large)
+                .navigationBarItems(
+                    trailing:
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Image(systemName: "xmark")
+                        }
+                )
+                .padding()
                 
             }
         }
